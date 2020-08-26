@@ -33,6 +33,19 @@
 
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/pedido.js"></script>
+    <script>
+            function salvarForm(){
+                if(typeof(Storage)!== "undefined")
+                    if (sessionStorage.cont) {
+                        sessionStorage.cont = Number(sessionStorage.cont)+1;
+                    } else {
+                        sessionStorage.cont = 1;
+                    }
+               
+               cad = document.getElementById('nome').value ;
+               sessionStorage.setItem("cad_"+sessionStorage.cont,cad);
+            }
+        </script>
     <title>Responder Quizz</title>
 </head>
     <body>
@@ -46,6 +59,22 @@
             <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
                 <h1 style="color:#fff; font: 40px MuseoSans100; margin:0">Responder Quiz</h1>
             </div>
+            <div >
+            <div class="text-center" style="background:rgba(0,0,0,0.5); padding:10px 0;">
+                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0">Formulário</h1>
+            </div>
+        
+            <form>
+                <br>
+                <div>
+                    <input type="text" id="nome" placeholder="Nome" style="width: 10em"/>
+                </div>
+
+            </form>
+
+            <button id="bt-enviar" onclick="salvarForm()">Enviar</button>
+
+        </div>  
         </div>
 
     </body>
