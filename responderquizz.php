@@ -31,23 +31,10 @@
     <!--Link de Vinculo com o CSS-->
     <link rel="stylesheet" type="text/css" href="page1.css">
 
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/pedido.js"></script>
-    <script>
-            function salvarForm(){
-                if(typeof(Storage)!== "undefined")
-                    if (sessionStorage.cont) {
-                        sessionStorage.cont = Number(sessionStorage.cont)+1;
-                    } else {
-                        sessionStorage.cont = 1;
-                    }
-               
-               cad = document.getElementById('nome').value ;
-               sessionStorage.setItem("cad_"+sessionStorage.cont,cad);
-            }
-        </script>
-    <title>Responder Quizz</title>
-</head>
+    
+    
+        <title>Responder Quizz</title>
+    </head>
     <body>
         
         <!--CONEXÃO COM A PAGE DE MENU FIXO-->
@@ -67,15 +54,81 @@
             <form>
                 <br>
                 <div>
-                    <input type="text" id="nome" placeholder="Nome" style="width: 10em"/>
+                    <input type="text" id="questao1" placeholder="Qual a cidade sede da UNIDAVI?" style="width: 20em"/>
+                </div>
+                <div>
+                    <input type="text" id="questao2" placeholder="Qual seu nome?" style="width: 20em"/>
                 </div>
 
             </form>
 
             <button id="bt-enviar" onclick="salvarForm()">Enviar</button>
 
-        </div>  
         </div>
+        <form id="questionario" name ="questionario" method = "post" action="resposta.php">
+        '1) Observe o video abaixo, e assinale o que ele representa:
+        <p>
+        <label>
+        <input type="radio" name="questao1" value="a" /> A) Melancia;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao1" value="b" /> B) Abobora;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao1" value="c" /> C) Abacate;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao1" value="d" /> D) Laranja.</label>
+        <br />
+        <br />
+        
+        <h5 class="font_1">1) Observe o video abaixo, e assinale o que ele representa:</h5>
+        
+        <label>
+        <input type="radio" name="questao2" value="a" /> A) Melancia;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao2" value="b" /> B) Abobora;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao2" value="c" /> C) Abacate;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao2" value="d" /> D) Laranja.</label>
+        <br />
+        <br />
+        
+        <h5 class="font_1">1) Observe o video abaixo, e assinale o que ele representa:</h5>
+        
+        <label>
+        <input type="radio" name="questao3" value="a" /> A) Melancia;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao3" value="b" /> B) Abobora;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao3" value="c" /> C) Abacate;</label>
+        <br />
+        <label>
+        <input type="radio" name="questao3" value="d" /> D) Laranja.</label>
+        <br />
+        <br />
+        <input type="submit" name="enviar" id = "enviar" value="Enviar" />
+        </form> 
 
+        
     </body>
+    <script>
+        function salvarForm(){
+            if(typeof(Storage)!== "undefined")
+                if (sessionStorage.cont) {
+                    sessionStorage.cont = Number(sessionStorage.cont)+1;
+                } else {
+                    sessionStorage.cont = 1;
+                }
+            
+            cad = document.getElementById('questao1').value + ';' + document.getElementById('questao2').value ;
+            sessionStorage.setItem("cad_"+sessionStorage.cont,cad);
+        }
+    </script>
 </html>
