@@ -44,7 +44,7 @@
 
         <div class="container">
             <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
-                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0">Responder Quiz</h1>
+                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0" onclick="pergunta()">Responder Quiz</h1>
             </div>
             <div >
             <div class="text-center" style="background:rgba(0,0,0,0.5); padding:10px 0;">
@@ -66,7 +66,7 @@
 
         </div>
         <form id="questionario" name ="questionario" method = "post" action="resposta.php">
-        '1) Observe o video abaixo, e assinale o que ele representa:
+        1) Observe o video abaixo, e assinale o que ele representa:
         <p>
         <label>
         <input type="radio" name="questao1" value="a" /> A) Melancia;</label>
