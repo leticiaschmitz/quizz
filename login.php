@@ -20,8 +20,8 @@ if (isset($_SESSION['logado'])) {
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
   <!--Link de Vinculo com o CSS-->
-  <link rel="stylesheet" type="text/css" href="./assets/css/page1.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/login.css">
+  <link rel="stylesheet" type="text/css" href="page1.css">
+  <!--<link rel="stylesheet" type="text/css" href="./assets/css/login.css"> ??? -->
 
   <title>Quizz</title>
 </head>
@@ -33,8 +33,8 @@ if (isset($_SESSION['logado'])) {
     ?>
 
     <div class="container">
-      <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
-        <h1 style="color:#fff; font: 40px MuseoSans100; margin:0">Quizz</h1>
+      <div class="text-center" style="background:rgba(0,0,0,0.5);">
+        <h1 style="color:#fff; font: 40px MuseoSans100;">Quizz</h1>
       </div>
       <hr>
       <div id="form-login">

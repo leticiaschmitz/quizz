@@ -31,9 +31,7 @@
     <!--Link de Vinculo com o CSS-->
     <link rel="stylesheet" type="text/css" href="page1.css">
 
-    
-    
-        <title>Responder Quizz</title>
+    <title>Responder Quizz</title>
     </head>
     <body>
         
@@ -44,7 +42,7 @@
 
         <div class="container">
             <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
-                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0" onclick="pergunta()">Responder Quiz</h1>
+                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0" onclick="pergunta()">Responder Quizz</h1>
             </div>
             <div >
             <div class="text-center" style="background:rgba(0,0,0,0.5); padding:10px 0;">
