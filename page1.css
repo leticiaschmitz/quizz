@@ -1,17 +1,30 @@
-#cabecalho{
+#cabecalho {
 	background-color: black;
 }
-#titulo{
+
+#titulo {
     color: black;
     text-align: center;
 }
-#login{
+
+#login {
 	color: black;
 	text-align: left;
 }
-#fonte{
+
+#fonte {
 	font-family: "Agency FB";
 }
-#centralizar{
-	text-align:center;
+
+#centralizar {
+    text-align:center;
+}
+
+#container {
+    margin: 5px 128px 0 128px;
+}
+
+.text-center {
+    margin-top: 10px;
+    padding:16px;
 }

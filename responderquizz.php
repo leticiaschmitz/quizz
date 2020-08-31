@@ -31,9 +31,8 @@
         <!--Link de Vinculo com o CSS-->
         <link rel="stylesheet" type="text/css" href="page1.css">
 
-        
-        
             <title>Responder Quizz</title>
+
     </head>
     <body>
         
@@ -44,7 +43,7 @@
 
         <div class="container">
             <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
-                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0">Responder Quiz</h1>
+                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0" onclick="pergunta()">Responder Quizz</h1>
             </div>
             <div >
             <div class="text-center" style="background:rgba(0,0,0,0.5); padding:10px 0;">
@@ -63,53 +62,8 @@
             </form>
 
             <button id="bt-enviar" onclick="salvarForm()">Enviar</button>
-
-            
             <div id="page-wrap">
             <h1>Quiz</h1>
-            <form action="processa.php" method="post" id="quiz">
-                <ol>
-                    <li>
-                        <h3>Qual sua comida preferida?</h3>
-                        <div>
-                            <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-                            <label for="question-1-answers-A">A) Strogonoff </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-                            <label for="question-1-answers-B">B) Carne Assada</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-                            <label for="question-1-answers-C">C) Batata Frita</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-                            <label for="question-1-answers-D">D) Sushi</label>
-                        </div>
-                    </li>
-
-                    <li>
-                        <h3>Qual o melhor destino para um final de semana?</h3>
-                        <div>
-                            <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
-                            <label for="question-2-answers-A">A) Praia</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
-                            <label for="question-2-answers-B">B) Campo</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
-                            <label for="question-2-answers-C">C) Montanhas</label>
-                        </div>
-                    </li>
-                </ol>
-                <input type="reset" value="Limpar" />
-            </form>
-
-        
     </body>
     <script>
         function salvarForm(){
@@ -119,8 +73,8 @@
                 } else {
                     sessionStorage.cont = 1;
                 }
-            
-            cad = document.getElementById('question-2-answers-A').value + ';' + document.getElementById('question-2-answers-B').value + ';' + document.getElementById('question-2-answers-C').value ;
+           
+            cad = document.getElementById('questao1').value + ';' + document.getElementById('questao2').value ;
             sessionStorage.setItem("cad_"+sessionStorage.cont,cad);
         }
     </script>
