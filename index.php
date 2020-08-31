@@ -25,7 +25,7 @@
 
         <div id="container">
             <div class="text-center" style="background:rgba(0,0,0,0.5);">
-                <h1 style="color:#fff; font: 40px MuseoSans100;">Quizz perguntas e respostas</h1>
+                <h1 style="color:#fff; font: 40px MuseoSans100;">Quizz perguntas e respostas!</h1>
             </div> 
         </div>
     </body>
