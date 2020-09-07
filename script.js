@@ -1,8 +1,15 @@
-function comecarJogo() {
+const iniciarBotao = document.getElementById('but-comecar');
+const divPerguntas = document.getElementById('mostrar');
 
+iniciarBotao.addEventListener('click', comecarJogo);
+
+function comecarJogo() {
+  iniciarBotao.classList.add('esconder');
+  divPerguntas.classList.remove('esconder');
+  proximaPergunta();
 }
 
-function pergunta() {
+function proximaPergunta() {
     
 }
 
