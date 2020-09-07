@@ -48,7 +48,7 @@ if (isset($_SESSION['logado'])) {
             <input name="senha" id="senha" type="password" placeholder="Senha" required class="form-control">
             <span class="fa fa-lock form-control-feedback text-muted"></span>
           </div>
-          <button type="submit" value="Entrar" class="btn btn-block btn-primary mt-lg">Entrar</button>
+          <button type="submit" value="Entrar" class="submit">Entrar</button>
         </form>
       </div>
     </div>

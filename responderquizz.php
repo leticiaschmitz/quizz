@@ -1,17 +1,17 @@
-<!--Verifica se foi logado e a senha autenticada se não foi ele não deixa acessar essa p�gina por ser restrita--><?php
+<!--Verifica se foi logado e a senha autenticada se não foi ele não deixa acessar essa p�gina por ser restrita-->
+<?php
+    session_start();
 
-                                                                                                                    session_start();
+    if (empty($_SESSION)) {
+        echo "Acesso restrito.";
+        die();
+    }
 
-                                                                                                                    if (empty($_SESSION)) {
-                                                                                                                        echo "Acesso restrito.";
-                                                                                                                        die();
-                                                                                                                    }
-
-                                                                                                                    if ($_SESSION["logado"] != true) {
-                                                                                                                        echo "Acesso restrito.";
-                                                                                                                        die();
-                                                                                                                    }
-                                                                                                                    ?>
+    if ($_SESSION["logado"] != true) {
+        echo "Acesso restrito.";
+        die();
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +30,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
         <!--Link de Vinculo com o CSS-->
         <link rel="stylesheet" type="text/css" href="page1.css">
-
-            <title>Responder Quizz</title>
-
+        <title>Responder Quizz</title>
     </head>
     <body>
         
@@ -41,41 +39,34 @@
         include("barramenu.php");
         ?>
 
-        <div class="container">
-            <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
-                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0" onclick="pergunta()">Responder Quizz</h1>
-            </div>
-            <div >
-            <div class="text-center" style="background:rgba(0,0,0,0.5); padding:10px 0;">
-                <h1 style="color:#fff; font: 40px MuseoSans100; margin:0">Formulário</h1>
-            </div>
-            
-            <!--ESSA PARTE DO CÓDIGO FUNCIONAR NA SESSION_STORAGE-->
-            <form>
-                <br>
-                <div>
-                    <input type="text" id="questao1" placeholder="Qual a cidade sede da UNIDAVI?" style="width: 20em"/>
-                </div>
-                <div>
-                    <input type="text" id="questao2" value=""placeholder="Qual seu nome?" style="width: 20em"/>
-                </div>
-            </form>
+        <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
+            <h1>Responder Quizz</h1>
+        </div>
 
-            <button id="bt-enviar" onclick="salvarForm()">Enviar</button>
-            <div id="page-wrap">
-            <h1>Quiz</h1>
+        <div class="container2">
+            <div class="perguntas">
+                <p>A pergunta vem aqui...</p>
+            </div>    
+        
+            <div class="options">
+                <label for="pergunta">Opção1</label>
+                <input type="radio" name="pergunta" id="pergunta">
+                <br>
+                <label for="pergunta">Opção2</label>
+                <input type="radio" name="pergunta" id="pergunta">
+                <br>
+                <label for="pergunta">Opção3</label>
+                <input type="radio" name="pergunta" id="pergunta">
+            </div>
+
+            <div class="butt">
+                <button id="but-comecar" hidden>Começar</button>
+                <button id="but-prox">Próxima</button>
+            </div>
+
+        </div>
     </body>
-    <script>
-        function salvarForm(){
-            if(typeof(Storage)!== "undefined")
-                if (sessionStorage.cont) {
-                    sessionStorage.cont = Number(sessionStorage.cont)+1;
-                } else {
-                    sessionStorage.cont = 1;
-                }
-           
-            cad = document.getElementById('questao1').value + ';' + document.getElementById('questao2').value ;
-            sessionStorage.setItem("cad_"+sessionStorage.cont,cad);
-        }
+    <script src="script.js">
+
     </script>
 </html>

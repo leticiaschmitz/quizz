@@ -20,11 +20,58 @@
     text-align:center;
 }
 
-#container {
-    margin: 5px 128px 0 128px;
-}
-
 .text-center {
     margin-top: 10px;
     padding:16px;
+}
+
+.container2 {
+    width: 450px;
+    height: 300px;
+    margin: 50px 0 0 450px;
+    padding: 30px 0 0 50px;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+}
+
+.butt {
+    margin: 80px 0 0 120px;
+    padding-right: 10px;
+}
+
+.butt button {
+    background-color: #007bff;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    color: whitesmoke;
+    border-color: #007bff;
+}
+
+.butt button:hover {
+    background-color: #026ddf;
+}
+
+h1 {
+    color:#fff; 
+    font: 40px MuseoSans100; 
+    margin:0;
+}
+
+div input {
+    margin-left: -80px !important;
+}
+
+div label {
+    margin: 10px 0 10px 300px;
+}
+
+.perguntas {
+    width: 250px;
+    height: 150px;
+    background: #fff;
+    border-radius: 15px;
+    position: absolute;
 }
