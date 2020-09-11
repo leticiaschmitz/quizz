@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarsupportedContent">
             Menu						
         </button>

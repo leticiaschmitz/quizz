@@ -38,35 +38,37 @@
         <?php
         include("barramenu.php");
         ?>
+    
+        <div>
+            <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
+                <h1>Responder Quizz</h1>
+            </div>
 
-        <div class="text-center" style="background:rgba(0,0,0,0.5); padding:16px 0;">
-            <h1>Responder Quizz</h1>
-        </div>
-
-        <div class="container2">
-            <div id="mostrar" class="esconder">
-                <div class="perguntas">
-                    <p>A pergunta vem aqui...</p>
-                </div>    
-            
-                <div class="options">
-                    <label for="pergunta">Opção1</label>
-                    <input type="radio" name="pergunta" id="pergunta">
-                    <br>
-                    <label for="pergunta">Opção2</label>
-                    <input type="radio" name="pergunta" id="pergunta">
-                    <br>
-                    <label for="pergunta">Opção3</label>
-                    <input type="radio" name="pergunta" id="pergunta">
+            <div class="container2">
+                <div id="mostrar" class="esconder">
+                    <div class="perguntas">
+                        <p>A pergunta vem aqui...</p>
+                    </div>    
+                
+                    <div class="options">
+                        <label for="pergunta">Opção1</label>
+                        <input type="radio" name="pergunta" id="pergunta">
+                        <br>
+                        <label for="pergunta">Opção2</label>
+                        <input type="radio" name="pergunta" id="pergunta">
+                        <br>
+                        <label for="pergunta">Opção3</label>
+                        <input type="radio" name="pergunta" id="pergunta">
+                    </div>
                 </div>
-            </div>
 
-            <div class="butt">
-                <button id="but-comecar" class="but-comecar">Iniciar</button>
-                <button id="but-conf" class="but-conf esconder">Confirmar</button>
-                <button id="but-proc" class="but-proc esconder">></button>
-            </div>
+                <div class="butt">
+                    <button id="but-comecar" class="but-comecar">Iniciar</button>
+                    <button id="but-conf" class="but-conf esconder">Confirmar</button>
+                    <button id="but-proc" class="but-proc esconder"></button>
+                </div>
 
+            </div>
         </div>
     </body>
     <script src="script.js">

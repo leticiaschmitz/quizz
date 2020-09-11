@@ -31,17 +31,16 @@ if (isset($_SESSION['logado'])) {
     <?php
     include("barramenu.php");
     ?>
-
-    <div class="container">
+    <div>
       <div class="text-center" style="background:rgba(0,0,0,0.5);">
         <h1 style="color:#fff; font: 40px MuseoSans100;">Quizz</h1>
       </div>
       <hr>
-      <div id="form-login">
+      <div class="container" id="form-login">
         <form role="form" data-parsley-validate="" novalidate="" class="mb-lg" action="autenticar.php" method="POST">
           <div class="form-group has-feedback">
             <input name="login" id="usuario" type="text" placeholder="Insira o usuario" autocomplete="off" required
-              class="form-control">
+            class="form-control">
             <span class="fa fa-user form-control-feedback text-muted"></span>
           </div>
           <div class="form-group has-feedback">
