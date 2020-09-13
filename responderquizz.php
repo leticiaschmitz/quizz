@@ -44,6 +44,7 @@
                 <h1>Responder Quizz</h1>
             </div>
 
+<<<<<<< Updated upstream
             <div class="container2">
                 <div id="mostrar" class="esconder">
                     <div class="perguntas">
@@ -66,8 +67,31 @@
                     <button id="but-comecar" class="but-comecar">Iniciar</button>
                     <button id="but-conf" class="but-conf esconder">Confirmar</button>
                     <button id="but-proc" class="but-proc esconder"></button>
+=======
+        <div class="text-center h1" style="background:rgba(0,0,0,0.5); padding:16px 0;">
+            <h1>Responder Quizz</h1>
+        </div>
+
+        <div class="container2">
+            <div id="mostrar" class="esconder">
+                <!-- <div class="perguntas">
+                    <p>A pergunta vem aqui...</p>
+                </div>     -->
+                <div id="perg"></div>
+                <div class="options">
+                    <button class="but">OPCAO 1</button>
+                    <button class="but">OPCAO 2</button>
+                    <button class="but">OPCAO 3</button>
+                    <button class="but">OPCAO 4</button>
+>>>>>>> Stashed changes
                 </div>
 
+<<<<<<< Updated upstream
+=======
+            <div class="butt">
+                <button id="but-comecar" class="but-comecar but">Iniciar</button>
+                <button id="but-conf" class="but-conf but esconder">Próxima</button>
+>>>>>>> Stashed changes
             </div>
         </div>
     </body>

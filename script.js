@@ -1,17 +1,41 @@
-const iniciarBotao = document.getElementById('but-comecar');
-const divPerguntas = document.getElementById('mostrar');
+const iniciarBotao = document.getElementById('but-comecar')
+const divPerguntas = document.getElementById('mostrar')
+const perguntaDiv  = document.getElementById('perg')
+const respostaDiv  = document.getElementById('options')
+
+let misturaPerguntas, perguntaAtual
 
 iniciarBotao.addEventListener('click', comecarJogo);
 
 function comecarJogo() {
-  iniciarBotao.classList.add('esconder');
-  divPerguntas.classList.remove('esconder');
-  proximaPergunta();
+  iniciarBotao.classList.add('esconder')
+  misturaPerguntas = perguntas.sort(() => Math.random() - .5)
+  perguntaAtual = 0
+  divPerguntas.classList.remove('esconder')
+  proximaPergunta()
 }
 
 function proximaPergunta() {
-    
+  mostrarPergunta(misturaPerguntas[perguntaAtual])
 }
+
+function mostrarPergunta(pergunta) {
+  perguntaDiv.innerText = pergunta.pergunta
+}
+
+function selecionaPergunta() {
+
+}
+
+const perguntas = [
+  {
+    pergunta: 'Quem descobriu o Brasil',
+    respostas: [
+      { text: '4' },
+      { text: '22'}
+    ]
+  }
+]
 
 function salvarForm(){
     if(typeof(Storage)!== "undefined") 

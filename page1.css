@@ -26,43 +26,42 @@
 }
 
 .container2 {
-    width: 450px;
-    height: 300px;
-    margin: 50px 0 0 450px;
-    padding: 30px 0 0 50px;
+    width: 500px;
+    max-width: 80%;
     background-color: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
     border-radius: 3%;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.user {
+    margin-left: 0px !important;
+}
+
+.senha {
+    margin-left: 0px !important;
 }
 
 .esconder {
     display: none;
 }
 
-.butt {
-    margin: 80px 0 0 50px;
-    padding-right: 10px;
-}
-
-.butt button {
-    background-color: #007bff;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    color: whitesmoke;
-    border-color: #007bff;
-    font-weight: bolder;
-}
-
-.butt button:hover {
-    background-color: #026ddf;
-}
-
 h1 {
     color:#fff; 
     font: 40px MuseoSans100; 
     margin:0;
+}
+
+.h1 {
+    margin-bottom: 80px;
 }
 
 div input {
@@ -82,6 +81,55 @@ div label {
     position: absolute;
 }
 
+.iniciar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 2.0em; 
+}
+
+/*BOTÕES*/
+
+.butt button:hover {
+    background-color: #026ddf;
+}
+
+.but-comecar {
+    margin: -80px 0 0 -20px !important;
+}
+
+.butt {
+    margin: 80px 0 0 50px;
+    padding-right: 10px;
+}
+
+.butt button {
+    background-color: #007bff;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    color: whitesmoke;
+    border-color: #007bff;
+    font-weight: bolder;
+}
+
+.but {
+    border-radius: 5px;    
+    padding: 5px 10px;
+    background: #007bff;
+    color: whitesmoke;
+    outline: none;
+}
+
+.but:hover {
+    border-color: black;
+}
+
+.butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .iniciar button {
     background-color: #007bff;
     width: 150px;
@@ -96,12 +144,18 @@ div label {
     background-color: #026ddf;
 }
 
-.iniciar a {
+.submit {
+    background-color: #007bff;
+    width: 120px;
+    height: 50px;
+    margin: 20px 0 0 500px;
+    border-radius: 5px;
     color: whitesmoke;
-    text-decoration: none;
-    font-size: 2.0em; 
+    border-color: #007bff;   
 }
 
-.but-comecar {
-    margin: 25px 0 0 70px;
+.submit:hover {
+    background-color: #026ddf;
 }
+
+/*BOTÕES*/
