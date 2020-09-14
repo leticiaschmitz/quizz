@@ -98,7 +98,7 @@ div label {
 }
 
 .butt {
-    margin: 80px 0 0 50px;
+    margin: 80px 0 0 40px;
     padding-right: 10px;
 }
 
@@ -156,6 +156,14 @@ div label {
 
 .submit:hover {
     background-color: #026ddf;
+}
+
+.certo {
+    background-color: rgb(84, 233, 84);
+}
+
+.errado {
+    background-color: rgb(255, 53, 53);
 }
 
 /*BOTÕES*/

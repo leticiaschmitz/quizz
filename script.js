@@ -1,4 +1,5 @@
 const iniciarBotao = document.getElementById('but-comecar')
+const proximaBotao = document.getElementById('but-prox')
 const divPerguntas = document.getElementById('mostrar')
 const perguntaDiv  = document.getElementById('perg')
 const respostaDiv  = document.getElementById('options')
@@ -6,38 +7,107 @@ const respostaDiv  = document.getElementById('options')
 let misturaPerguntas, perguntaAtual
 
 iniciarBotao.addEventListener('click', comecarJogo);
+proximaBotao.addEventListener('click', () => {
+  perguntaAtual++
+  proximaPergunta()
+})
 
 function comecarJogo() {
   iniciarBotao.classList.add('esconder')
   misturaPerguntas = perguntas.sort(() => Math.random() - .5)
   perguntaAtual = 0
   divPerguntas.classList.remove('esconder')
+  proximaBotao.classList.remove('esconder')
   proximaPergunta()
 }
 
 function proximaPergunta() {
+  resetStatus()
   mostrarPergunta(misturaPerguntas[perguntaAtual])
 }
 
 function mostrarPergunta(pergunta) {
   perguntaDiv.innerText = pergunta.pergunta
+  pergunta.respostas.forEach(resposta => {
+    const botao = document.createElement('button')
+    botao.setAttribute('id',"resp")
+    botao.innerText = resposta.texto
+    botao.classList.add('but')
+    if (resposta.certo) {
+      botao.dataset.certo = resposta.certo
+    }
+    botao.addEventListener('click', selecionaResposta)
+    respostaDiv.appendChild(botao)
+  });
 }
 
-function selecionaPergunta() {
+function resetStatus() {
+  while (respostaDiv.firstChild) {
+    respostaDiv.removeChild(respostaDiv.firstChild)
+  }
+}
 
+function selecionaResposta(e) {
+  const botaoSelecionado = e.target
+  const correto = botaoSelecionado.dataset.certo
+  setarStatus(document.body, correto)
+  Array.from(respostaDiv.children).forEach(botao => {
+    setarStatus(botao, botao.dataset.certo)
+  })
+  if (misturaPerguntas.length > perguntaAtual + 1) {
+    proximaBotao.classList.remove('esconder')
+  } else {
+    iniciarBotao.innerText = 'Restart'
+    iniciarBotao.classList.remove('esconder')
+  }
+}
+
+function setarStatus(element, correto) {
+  limparStatus(element)
+  if (correto) {
+    element.classList.add('certo')
+    salvarForm(correto)
+  } else {
+    element.classList.add('errado')
+  }
+}
+
+function limparStatus(element) {
+  element.classList.remove('certo')
+  element.classList.remove('errado')
 }
 
 const perguntas = [
   {
-    pergunta: 'Quem descobriu o Brasil',
+    pergunta: 'Quem descobriu o Brasil?',
     respostas: [
-      { text: '4' },
-      { text: '22'}
+      { texto: 'Pedro Alvares Cabral', certo: true },
+      { texto: 'João Pessoa', certo: false},
+      { texto: 'Cristovao Colombu', certo: false},
+      { texto: 'Rivaldo', certo: false}
+    ]
+  },
+  {
+    pergunta: 'Qual o dia da indepedência?',
+    respostas: [
+      { texto: '1', certo: false },
+      { texto: '30', certo: false},
+      { texto: '10', certo: false},
+      { texto: '7', certo: true}
+    ]
+  },
+  {
+    pergunta: 'Qual a soma da raiz quadrada de 64 com 64?',
+    respostas: [
+      { texto: '0', certo: false },
+      { texto: '72', certo: true},
+      { texto: '8', certo: false},
+      { texto: '64', certo: false}
     ]
   }
 ]
 
-function salvarForm(){
+function salvarForm(botao){
     if(typeof(Storage)!== "undefined") 
     {
         if (sessionStorage.cont) {
@@ -46,8 +116,8 @@ function salvarForm(){
             sessionStorage.cont = 1;
         }
     }
-    const cad = document.getElementById('questao1').value + ';' + document.getElementById('questao2').value ;
-    sessionStorage.setItem("cad_"+sessionStorage.cont,cad);
+    const val = botao//document.getElementById('resp').value;
+    sessionStorage.setItem("val_"+sessionStorage.cont,val.value);
 }
 
 //SESSÃO 24H

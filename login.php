@@ -31,12 +31,8 @@ if (isset($_SESSION['logado'])) {
     <?php
     // include("barramenu.php");
     ?>
-<<<<<<< Updated upstream
-    <div>
-=======
 
   <div class="container">
->>>>>>> Stashed changes
       <div class="text-center" style="background:rgba(0,0,0,0.5);">
         <h1 style="color:#fff; font: 40px MuseoSans100;">Quizz</h1>
       </div>
@@ -45,11 +41,7 @@ if (isset($_SESSION['logado'])) {
         <form role="form" data-parsley-validate="" novalidate="" class="mb-lg" action="autenticar.php" method="POST">
           <div class="form-group has-feedback">
             <input name="login" id="usuario" type="text" placeholder="Insira o usuario" autocomplete="off" required
-<<<<<<< Updated upstream
-            class="form-control">
-=======
               class="form-control user">
->>>>>>> Stashed changes
             <span class="fa fa-user form-control-feedback text-muted"></span>
           </div>
           <div class="form-group has-feedback">
@@ -62,3 +54,4 @@ if (isset($_SESSION['logado'])) {
     </div>
   </body>
 </html>
+
