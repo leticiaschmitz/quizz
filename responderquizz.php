@@ -33,32 +33,28 @@
         <title>Responder Quizz</title>
     </head>
     <body>
-        
-        <!--CONEXÃO COM A PAGE DE MENU FIXO-->
-        <?php
-        include("barramenu.php");
-        ?>
-
-        <div class="text-center h1" style="background:rgba(0,0,0,0.5); padding:16px 0;">
-            <h1>Responder Quizz</h1>
-        </div>
-
-        <div class="container2">
-            <div id="mostrar" class="esconder">
-                <div id="perg"></div>
-
-                <div id="options" class="options">
-                    <button id="p1" class="but">OPCAO 1</button>
-                    <button id="p2" class="but">OPCAO 2</button>
-                    <button id="p3" class="but">OPCAO 3</button>
-                    <button id="p4" class="but">OPCAO 4</button>
-                </div>
+        <div class="container">
+            <div class="text-center h1" style="background:rgba(0,0,0,0.5); padding:16px 0;">
+                <h1>Responder Quizz</h1>
             </div>
 
-            <div class="butt">
-                    <button id="but-comecar" class="but-comecar but">Iniciar</button>
-                    <button id="but-prox" class="but-prox but esconder">Próxima</button>
-            </div>  
+            <div class="container2">
+                <div id="mostrar" class="esconder">
+                    <div id="perg"></div>
+
+                    <div id="options" class="options">
+                        <button id="p1" class="but">OPCAO 1</button>
+                        <button id="p2" class="but">OPCAO 2</button>
+                        <button id="p3" class="but">OPCAO 3</button>
+                        <button id="p4" class="but">OPCAO 4</button>
+                    </div>
+                </div>
+
+                <div class="butt">
+                        <button id="but-comecar" class="but-comecar but">Iniciar</button>
+                        <button id="but-prox" class="but-prox but esconder">Próxima</button>
+                </div>  
+            </div>
         </div>
 
         <script src="script.js"></script>
