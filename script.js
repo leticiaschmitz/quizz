@@ -38,6 +38,7 @@ function mostrarPergunta(pergunta) {
     }
     botao.addEventListener('click', selecionaResposta)
     respostaDiv.appendChild(botao)
+    const vlrBotao = botao.value
   });
 }
 
@@ -60,13 +61,13 @@ function selecionaResposta(e) {
     iniciarBotao.innerText = 'Restart'
     iniciarBotao.classList.remove('esconder')
   }
+  salvarForm(correto, botaoSelecionado)
 }
 
 function setarStatus(element, correto) {
   limparStatus(element)
   if (correto) {
     element.classList.add('certo')
-    salvarForm(correto)
   } else {
     element.classList.add('errado')
   }
@@ -107,7 +108,8 @@ const perguntas = [
   }
 ]
 
-function salvarForm(botao){
+function salvarForm(correto, botaoSelecionado) {
+    console.log(botaoSelecionado.textContent)
     if(typeof(Storage)!== "undefined") 
     {
         if (sessionStorage.cont) {
@@ -116,8 +118,9 @@ function salvarForm(botao){
             sessionStorage.cont = 1;
         }
     }
-    const val = botao//document.getElementById('resp').value;
-    sessionStorage.setItem("val_"+sessionStorage.cont,val.value);
+
+    // let val = document.getElementById('resp').value;
+    sessionStorage.setItem("val_" + sessionStorage.cont,botaoSelecionado.textContent);
 }
 
 //SESSÃO 24H
